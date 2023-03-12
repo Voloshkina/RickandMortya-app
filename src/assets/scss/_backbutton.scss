@@ -1,0 +1,19 @@
+.btn {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  box-sizing: border-box;
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/arrow_back_24px.png');
+  }
+
+  &__text {
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+}
