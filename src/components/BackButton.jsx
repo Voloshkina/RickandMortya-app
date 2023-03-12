@@ -1,12 +1,15 @@
+import { useNavigate } from 'react-router-dom';
+
 import '../assets/scss/style.scss';
 
-function BackButton() {
+export const BackButton = () => {
+  const navigate = useNavigate();
+  const goBack = () => navigate(-1);
+
   return (
-    <button className='btn'>
+    <button onClick={goBack} className='btn'>
       <span className='btn__icon'></span>
       <span className='btn__text'>go back</span>
     </button>
   );
-}
-
-export default BackButton;
+};

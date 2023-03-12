@@ -1,7 +1,5 @@
 import '../assets/scss/style.scss';
 
-function Logo() {
+export const Logo = () => {
   return <div className='wrapper'></div>;
-}
-
-export default Logo;
+};

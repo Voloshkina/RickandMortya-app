@@ -1,6 +1,6 @@
 import '../assets/scss/style.scss';
 
-function SearchBar() {
+export const SearchBar = () => {
   return (
     <div className='wrapper-input'>
       <input
@@ -10,6 +10,4 @@ function SearchBar() {
       />
     </div>
   );
-}
-
-export default SearchBar;
+};
