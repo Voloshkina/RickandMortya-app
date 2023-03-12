@@ -21,6 +21,7 @@
     height: 70%;
     object-fit: cover;
     border-radius: 4px 4px 0 0;
+
     @media (max-width: 340px) {
       height: 180px;
     }
@@ -34,6 +35,9 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   span {
     color: rgba(0, 0, 0, 0.6);

@@ -41,11 +41,13 @@
   }
 
   &__title {
+    margin-bottom: 20px;
     height: 50px;
     color: rgba(8, 31, 50, 1);
     font-weight: 400;
     font-size: 48px;
     line-height: 48px;
+    text-align: center;
 
     @media (max-width: 480px) {
       height: 32px;
