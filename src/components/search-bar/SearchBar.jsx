@@ -1,4 +1,4 @@
-import '../assets/scss/style.scss';
+import './style.scss';
 
 export const SearchBar = ({ query, handleChange }) => {
   return (

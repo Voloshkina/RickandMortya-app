@@ -1,0 +1,17 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+
+  &__img {
+    width: 200px;
+
+    @media (max-width: 720px) {
+      width: 100px;
+    }
+
+    @media (max-width: 480px) {
+      width: 50px;
+    }
+  }
+}

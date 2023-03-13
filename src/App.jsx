@@ -4,8 +4,8 @@ import './assets/scss/style.scss';
 
 export const App = () => {
   return (
-    <div>
+    <main>
       <Outlet />
-    </div>
+    </main>
   );
 };
