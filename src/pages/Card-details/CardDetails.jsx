@@ -1,16 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import '../assets/scss/style.scss';
-import { getDataById } from '../API';
-import { BackButton, Loader } from '../components';
+import './style.scss';
+import { getDataById } from '../../API';
+import { BackButton, Loader } from '../../components';
 
 export const CardDetails = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-
-  console.log(data);
 
   useEffect(() => {
     async function fetchData() {

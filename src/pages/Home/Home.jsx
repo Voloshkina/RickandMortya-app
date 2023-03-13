@@ -1,16 +1,14 @@
 import { useState, useEffect } from 'react';
 
-import { getData } from '../API';
-import '../assets/scss/style.scss';
-import { Cards } from '../components/Cards';
-import { SearchBar, Logo } from '../components';
+import './style.scss';
+import { getData } from '../../API';
+import { useLocalStorage } from '../../utils/storage';
+import { Cards, SearchBar, Logo, Loader } from '../../components';
 
-function Home() {
+export const Home = () => {
   const [receivedData, setReceivedData] = useState([]);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useLocalStorage('query', '');
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleChange = (event) => setQuery(event.target.value);
 
   useEffect(() => {
     async function fetchData() {
@@ -27,6 +25,8 @@ function Home() {
     fetchData();
   }, [query]);
 
+  const handleChange = (event) => setQuery(event.target.value);
+
   const filtered = receivedData?.filter((elem) =>
     elem.name.toLowerCase().includes(query.toLowerCase())
   );
@@ -35,12 +35,7 @@ function Home() {
     <div className='container'>
       <Logo />
       <SearchBar handleChange={handleChange} query={query} />
-
-      <section className='container-cards'>
-        <Cards isLoading={isLoading} results={filtered} />
-      </section>
+      <Cards isLoading={isLoading} results={filtered} />
     </div>
   );
-}
-
-export { Home };
+};
