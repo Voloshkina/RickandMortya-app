@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './style.scss';
 import { getData } from '../../API';
 import { useLocalStorage } from '../../utils/storage';
-import { Cards, SearchBar, Logo, Loader } from '../../components';
+import { Cards, SearchBar, Logo } from '../../components';
 
 export const Home = () => {
   const [receivedData, setReceivedData] = useState([]);

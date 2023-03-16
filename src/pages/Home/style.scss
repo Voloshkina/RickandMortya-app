@@ -75,6 +75,7 @@
 .description {
   width: 385px;
   margin: 0 20px;
+
   @media (max-width: 480px) {
     max-width: 100%;
   }
@@ -86,6 +87,7 @@
     box-sizing: border-box;
     border-bottom: 1px solid rgb(225, 230, 235);
   }
+
   &__subtitle {
     color: rgba(8, 31, 50, 1);
     font-size: 16px;
@@ -93,6 +95,7 @@
     line-height: 24px;
     letter-spacing: 0.15px;
   }
+
   &__text {
     color: rgba(110, 121, 140, 1);
     font-size: 14px;
